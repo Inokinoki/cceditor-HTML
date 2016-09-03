@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Inoki Shaw">
+    <meta name="keywords" content="Lego;Robot;Creation;Shanghai University">
+    <meta name="description" content="Shanghai University Creation Club Official Website">
+
+    <title>创幻社 HTML 教学系统</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function fzminus(){if(window.fsize>=12){window.fsize = window.fsize-2;}document.getElementById("fz-size-label").innerText= window.fsize+"pt";document.getElementById("html-main-textarea").style.fontSize= window.fsize+"pt";}
+        function fzplus(){if(window.fsize<=70){window.fsize+=2;}document.getElementById("fz-size-label").innerText= window.fsize+"pt";document.getElementById("html-main-textarea").style.fontSize= window.fsize+"pt";}
+        function run(){if (!window.isRun){document.getElementById("html-main-iframe").contentWindow.document.write(document.getElementById("html-main-textarea").value);document.getElementById("html-main-title").innerText=document.getElementById("html-main-iframe").contentWindow.document.title;document.getElementById("button-run").style.display="none";document.getElementById("button-stop").style.display="inline";document.getElementById("html-main-textarea").style.display="none";document.getElementById("html-main-iframe").style.display="inline";document.getElementById("html-main-title").style.display="inline";window.isRun = true;}}
+        function stop(){if (window.isRun){document.getElementById("html-main-iframe").contentWindow.location.href = "about:blank";document.getElementById("button-run").style.display="inline";document.getElementById("button-stop").style.display="none";document.getElementById("html-main-textarea").style.display="inline";document.getElementById("html-main-iframe").style.display="none";document.getElementById("html-main-title").style.display="none";window.isRun = false;}}
+        function save(){var filename = "index.html";var content = " "+document.getElementById("html-main-textarea").value;var aLink = document.createElement('a');var blob = new Blob([content]);var evt = document.createEvent("HTMLEvents");evt.initEvent("click", false, false);aLink.download = filename;aLink.href = URL.createObjectURL(blob);aLink.dispatchEvent(evt);}
+    </script>
+    <style>
+        .wrapper{position:absolute;height:100%;width:100%;padding-right:0;padding-left:0;margin:0;background-color:black}.navlist{float:left;height:100%;padding-top:70px;background-color:#293038;overflow-x:hidden;overflow-y:hidden}.main-container{float:left;height:100%;padding-top:70px;padding-left:20px;padding-right:20px;margin:0;background-color:white;overflow-x:hidden;overflow-y:auto}#html-main-textarea{resize:none;font-size:18pt;height:97%;width:100%;overflow-x:auto;overflow-y:auto}#html-main-iframe{display:none;height:94%;width:100%;overflow-x:auto;overflow-y:auto}#font-size-controller{position:absolute;left:5%;right:5%;width:90%;bottom:2%}#button-fz-minus{border-radius:6px 0 0 6px;margin:0;padding:0;background-color:white;font-size:1.2em;line-height:30px;text-align:center;height:30px;width:15%}#button-fz-minus:hover{background-color:gray}#button-fz-plus{border-radius:0 6px 6px 0;margin:0;padding:0;background-color:white;font-size:1.2em;line-height:30px;text-align:center;height:10%;width:15%}#button-fz-plus:hover{background-color:gray}#fz-size-label{margin:0;padding:0;font-size:1.2em;background-color:white;line-height:30px;text-align:center;height:30px;width:65%}#insert-label{overflow-x:hidden;overflow-y:auto;bottom:10%;height:85%;width:100%}#button-stop{display:none}
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Switch to this toggle button in small screen -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.php">上海大学创幻社</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right" id="navbar">
+                <li id="button-run"><a href="javascript:run()"><span class="glyphicon glyphicon-play"></span>  运行</a></li>
+                <li id="button-stop"><a href="javascript:stop()"><span class="glyphicon glyphicon-stop"></span>  停止</a></li>
+                <li><a href="javascript:save()"><span class="glyphicon glyphicon-save"></span>  储存</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid wrapper row">
+        <div class="navlist col-xs-12 col-sm-12 col-md-3 col-lg-2">
+            <div id="insert-label">
+                <div class="list-group">
+                    <a class="list-group-item"><big><em>HTML 参考</em></big></a>
+                    <a class="list-group-item">&lt;!--&gt;注释</a>
+                    <a class="list-group-item">&lt;!DOCTYPE&gt;文档类型</a>
+                    <a class="list-group-item">&lt;a&gt;链接</a>
+                    <a class="list-group-item">&lt;abbr&gt;缩写文本</a>
+                    <a class="list-group-item">&lt;address&gt;联系信息</a>
+                    <a class="list-group-item">&lt;area&gt;图片映射区</a>
+                    <a class="list-group-item">&lt;article&gt;文章</a>
+                    <a class="list-group-item">&lt;aside&gt;边缘</a>
+                    <a class="list-group-item">&lt;audio&gt;音频</a>
+                    <a class="list-group-item">&lt;b&gt;粗体文本</a>
+                    <a class="list-group-item">&lt;base&gt;默认基础地址</a>
+                    <a class="list-group-item">&lt;big&gt;大号字体</a>
+                    <a class="list-group-item">&lt;bdo&gt;文本方向</a>
+                    <a class="list-group-item">&lt;blockquote&gt;引用块</a>
+                    <a class="list-group-item">&lt;body&gt;文档主体</a>
+                    <a class="list-group-item">&lt;br&gt;换行符</a>
+                    <a class="list-group-item">&lt;button&gt;按钮</a>
+                    <a class="list-group-item">&lt;canvas&gt;画布</a>
+                    <a class="list-group-item">&lt;caption&gt;表格标题</a>
+                    <a class="list-group-item">&lt;cite&gt;引用</a>
+                    <a class="list-group-item">&lt;code&gt;代码</a>
+                    <a class="list-group-item">&lt;col&gt;表格列</a>
+                    <a class="list-group-item">&lt;dd&gt;定义列表定义部分</a>
+                    <a class="list-group-item">&lt;del&gt;删除元素</a>
+                    <a class="list-group-item">&lt;div&gt;块</a>
+                    <a class="list-group-item">&lt;dl&gt;定义列表</a>
+                    <a class="list-group-item">&lt;dt&gt;定义列表术语</a>
+                    <a class="list-group-item">&lt;em&gt;强调</a>
+                    <a class="list-group-item">&lt;embed&gt;嵌入插件</a>
+                    <a class="list-group-item">&lt;fieldset&gt;表单字段组</a>
+                    <a class="list-group-item">&lt;figcaption&gt;插图标题</a>
+                    <a class="list-group-item">&lt;figure&gt;插图</a>
+                    <a class="list-group-item">&lt;font&gt;字体</a>
+                    <a class="list-group-item">&lt;footer&gt;页面尾</a>
+                    <a class="list-group-item">&lt;form&gt;表单</a>
+                    <a class="list-group-item">&lt;frame&gt;框架组框架</a>
+                    <a class="list-group-item">&lt;frameset&gt;框架组</a>
+                    <a class="list-group-item">&lt;h1&gt;标题</a>
+                    <a class="list-group-item">&lt;h2&gt;标题</a>
+                    <a class="list-group-item">&lt;h3&gt;标题</a>
+                    <a class="list-group-item">&lt;h4&gt;标题</a>
+                    <a class="list-group-item">&lt;h5&gt;标题</a>
+                    <a class="list-group-item">&lt;h6&gt;标题</a>
+                    <a class="list-group-item">&lt;head&gt;头部元素</a>
+                    <a class="list-group-item">&lt;header&gt;页面头</a>
+                    <a class="list-group-item">&lt;hr&gt;分隔线</a>
+                    <a class="list-group-item">&lt;html&gt;页面根元素</a>
+                    <a class="list-group-item">&lt;i&gt;斜体</a>
+                    <a class="list-group-item">&lt;iframe&gt;框架</a>
+                    <a class="list-group-item">&lt;img&gt;图片</a>
+                    <a class="list-group-item">&lt;input&gt;表单输入框</a>
+                    <a class="list-group-item">&lt;ins&gt;新插入文本</a>
+                    <a class="list-group-item">&lt;kbd&gt;键盘按键</a>
+                    <a class="list-group-item">&lt;label&gt;标签</a>
+                    <a class="list-group-item">&lt;legend&gt;表单字段组标题</a>
+                    <a class="list-group-item">&lt;li&gt;列表项</a>
+                    <a class="list-group-item">&lt;link&gt;外部资源链接</a>
+                    <a class="list-group-item">&lt;main&gt;文档主要内容</a>
+                    <a class="list-group-item">&lt;map&gt;图片映射组</a>
+                    <a class="list-group-item">&lt;mark&gt;标记文本</a>
+                    <a class="list-group-item">&lt;meta&gt;页面信息</a>
+                    <a class="list-group-item">&lt;nav&gt;导航</a>
+                    <a class="list-group-item">&lt;noframes&gt;不支持框架时显示</a>
+                    <a class="list-group-item">&lt;noscript&gt;不支持脚本时显示</a>
+                    <a class="list-group-item">&lt;object&gt;对象</a>
+                    <a class="list-group-item">&lt;ol&gt;有序列表</a>
+                    <a class="list-group-item">&lt;optgroup&gt;表单选项组</a>
+                    <a class="list-group-item">&lt;option&gt;表单可选项</a>
+                    <a class="list-group-item">&lt;output&gt;输出文本</a>
+                    <a class="list-group-item">&lt;p&gt;段落</a>
+                    <a class="list-group-item">&lt;param&gt;对象参数</a>
+                    <a class="list-group-item">&lt;pre&gt;预定义文本</a>
+                    <a class="list-group-item">&lt;progress&gt;进度显示</a>
+                    <a class="list-group-item">&lt;q&gt;短引用</a>
+                    <a class="list-group-item">&lt;samp&gt;样本</a>
+                    <a class="list-group-item">&lt;script&gt;脚本</a>
+                    <a class="list-group-item">&lt;section&gt;节</a>
+                    <a class="list-group-item">&lt;select&gt;选择表单</a>
+                    <a class="list-group-item">&lt;small&gt;小字体</a>
+                    <a class="list-group-item">&lt;span&gt;行内元素</a>
+                    <a class="list-group-item">&lt;strong&gt;强调</a>
+                    <a class="list-group-item">&lt;style&gt;CSS样式</a>
+                    <a class="list-group-item">&lt;sub&gt;下标</a>
+                    <a class="list-group-item">&lt;sup&gt;上标</a>
+                    <a class="list-group-item">&lt;table&gt;表格</a>
+                    <a class="list-group-item">&lt;tbody&gt;表格主要部分</a>
+                    <a class="list-group-item">&lt;td&gt;表格项</a>
+                    <a class="list-group-item">&lt;textarea&gt;文本域</a>
+                    <a class="list-group-item">&lt;tfoot&gt;表格尾部</a>
+                    <a class="list-group-item">&lt;th&gt;表头</a>
+                    <a class="list-group-item">&lt;thead&gt;表格头部</a>
+                    <a class="list-group-item">&lt;time&gt;时间</a>
+                    <a class="list-group-item">&lt;title&gt;标题</a>
+                    <a class="list-group-item">&lt;tr&gt;表格行</a>
+                    <a class="list-group-item">&lt;tt&gt;等宽字体</a>
+                    <a class="list-group-item">&lt;u&gt;下划线文本</a>
+                    <a class="list-group-item">&lt;ul&gt;无序列表</a>
+                    <a class="list-group-item">&lt;var&gt;变量</a>
+                    <a class="list-group-item">&lt;video&gt;视频</a>
+                </div>
+            </div>
+            <div id="font-size-controller">
+              <label id="button-fz-minus" onclick="fzminus()">-</label>
+              <label id="fz-size-label">18pt</label>
+              <label id="button-fz-plus" onclick="fzplus()">+</label>
+            </div>
+        </div>
+        <div id="html-main-container" class="main-container col-xs-12 col-sm-12 col-md-9 col-lg-10">
+            <textarea id="html-main-textarea"></textarea>
+            <h5 id="html-main-title"></h5>
+            <iframe id="html-main-iframe" class="embed-responsive-item"></iframe>
+        </div>
+    </div>
+    
+    <script>
+      window.fsize = 18;
+      window.isRun = false;
+      $("textarea").on('keydown',function(e){
+          if(e.keyCode == 9){
+              e.preventDefault();
+              var indent = '    ';
+              var start = this.selectionStart;
+              var end = this.selectionEnd;
+              var selected = window.getSelection().toString();
+              selected = indent + selected.replace(/\n/g,'\n'+indent);
+              this.value = this.value.substring(0,start) + selected + this.value.substring(end);
+              this.setSelectionRange(start+indent.length,start+selected.length);
+          }
+      });
+    </script>
+</body>
+</html>
