@@ -34,104 +34,99 @@
                 </button>
                 <a class="navbar-brand" href="./index.php">上海大学创幻社</a>
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="button-run"><a href="javascript:run()"><span class="glyphicon glyphicon-play"></span>  运行</a></li>
+                <li id="button-stop"><a href="javascript:stop()"><span class="glyphicon glyphicon-stop"></span>  停止</a></li>
+                <li><a href="javascript:save()"><span class="glyphicon glyphicon-save"></span>  储存</a></li>
+                
+            </ul>
         </div>
     </nav>
     <div class="container-fluid wrapper row">
         <div class="navlist col-xs-12 col-sm-12 col-md-3 col-lg-2">
             <div id="insert-label">
                 <div class="list-group">
+                    <a class="list-group-item"><big><em>HTML 参考</em></big></a>
                     <a class="list-group-item">&lt;!--&gt;注释</a>
                     <a class="list-group-item">&lt;!DOCTYPE&gt;文档类型</a>
                     <a class="list-group-item">&lt;a&gt;链接</a>
                     <a class="list-group-item">&lt;abbr&gt;缩写文本</a>
                     <a class="list-group-item">&lt;address&gt;联系信息</a>
-                    <a class="list-group-item">&lt;area&gt;图像映射</a>
+                    <a class="list-group-item">&lt;area&gt;图片映射区</a>
                     <a class="list-group-item">&lt;article&gt;文章</a>
                     <a class="list-group-item">&lt;aside&gt;边缘</a>
                     <a class="list-group-item">&lt;audio&gt;音频</a>
                     <a class="list-group-item">&lt;b&gt;粗体文本</a>
                     <a class="list-group-item">&lt;base&gt;默认基础地址</a>
-                    <a class="list-group-item">&lt;big&gt;</a>
-                    <a class="list-group-item">&lt;blockquote&gt;</a>
-                    <a class="list-group-item">&lt;body&gt;</a>
-                    <a class="list-group-item">&lt;br&gt;</a>
-                    <a class="list-group-item">&lt;button&gt;</a>
-                    <a class="list-group-item">&lt;canvas&gt;</a>
-                    <a class="list-group-item">&lt;caption&gt;</a>
-                    <a class="list-group-item">&lt;center&gt;</a>
-                    <a class="list-group-item">&lt;cite&gt;</a>
-                    <a class="list-group-item">&lt;code&gt;</a>
-                    <a class="list-group-item">&lt;col&gt;</a>
-                    <a class="list-group-item">&lt;colgroup&gt;</a>
-                    <a class="list-group-item">&lt;command&gt;</a>
-                    <a class="list-group-item">&lt;datalist&gt;</a>
-                    <a class="list-group-item">&lt;dd&gt;</a>
-                    <a class="list-group-item">&lt;del&gt;</a>
-                    <a class="list-group-item">&lt;details&gt;</a>
-                    <a class="list-group-item">&lt;dfn&gt;</a>
-                    <a class="list-group-item">&lt;dialog&gt;</a>
-                    <a class="list-group-item">&lt;dir&gt;</a>
-                    <a class="list-group-item">&lt;div&gt;</a>
-                    <a class="list-group-item">&lt;dl&gt;</a>
-                    <a class="list-group-item">&lt;dt&gt;</a>
-                    <a class="list-group-item">&lt;em&gt;</a>
-                    <a class="list-group-item">&lt;embed&gt;</a>
-                    <a class="list-group-item">&lt;fieldset&gt;</a>
-                    <a class="list-group-item">&lt;figcaption&gt;</a>
-                    <a class="list-group-item">&lt;figure&gt;</a>
-                    <a class="list-group-item">&lt;font&gt;</a>
-                    <a class="list-group-item">&lt;footer&gt;</a>
-                    <a class="list-group-item">&lt;form&gt;</a>
-                    <a class="list-group-item">&lt;frame&gt;</a>
-                    <a class="list-group-item">&lt;frameset&gt;</a>
-                    <a class="list-group-item">&lt;h1&gt; - &lt;h6&gt;标题</a>
-                    <a class="list-group-item">&lt;head&gt;</a>
-                    <a class="list-group-item">&lt;header&gt;</a>
-                    <a class="list-group-item">&lt;hr&gt;</a>
-                    <a class="list-group-item">&lt;html&gt;</a>
-                    <a class="list-group-item">&lt;i&gt;</a>
-                    <a class="list-group-item">&lt;iframe&gt;</a>
-                    <a class="list-group-item">&lt;img&gt;</a>
-                    <a class="list-group-item">&lt;input&gt;</a>
-                    <a class="list-group-item">&lt;ins&gt;</a>
-                    <a class="list-group-item">&lt;kbd&gt;</a>
-                    <a class="list-group-item">&lt;keygen&gt;</a>
-                    <a class="list-group-item">&lt;label&gt;</a>
-                    <a class="list-group-item">&lt;legend&gt;</a>
-                    <a class="list-group-item">&lt;li&gt;</a>
-                    <a class="list-group-item">&lt;link&gt;</a>
-                    <a class="list-group-item">&lt;main&gt;</a>
-                    <a class="list-group-item">&lt;map&gt;</a>
-                    <a class="list-group-item">&lt;mark&gt;</a>
-                    <a class="list-group-item">&lt;menu&gt;</a>
-                    <a class="list-group-item">&lt;menuitem&gt;</a>
-                    <a class="list-group-item">&lt;meta&gt;</a>
-                    <a class="list-group-item">&lt;meter&gt;</a>
-                    <a class="list-group-item">&lt;nav&gt;</a>
-                    <a class="list-group-item">&lt;noframes&gt;</a>
-                    <a class="list-group-item">&lt;noscript&gt;</a>
-                    <a class="list-group-item">&lt;object&gt;</a>
-                    <a class="list-group-item">&lt;ol&gt;</a>
-                    <a class="list-group-item">&lt;optgroup&gt;</a>
-                    <a class="list-group-item">&lt;option&gt;</a>
-                    <a class="list-group-item">&lt;output&gt;</a>
-                    <a class="list-group-item">&lt;p&gt;</a>
-                    <a class="list-group-item">&lt;param&gt;</a>
-                    <a class="list-group-item">&lt;pre&gt;</a>
-                    <a class="list-group-item">&lt;progress&gt;</a>
-                    <a class="list-group-item">&lt;q&gt;</a>
-                    <a class="list-group-item">&lt;rp&gt;</a>
-                    <a class="list-group-item">&lt;rt&gt;</a>
-                    <a class="list-group-item">&lt;ruby&gt;</a>
-                    <a class="list-group-item">&lt;s&gt;</a>
-                    <a class="list-group-item">&lt;samp&gt;</a>
-                    <a class="list-group-item">&lt;script&gt;</a>
-                    <a class="list-group-item">&lt;section&gt;</a>
-                    <a class="list-group-item">&lt;select&gt;</a>
-                    <a class="list-group-item">&lt;small&gt;</a>
-                    <a class="list-group-item">&lt;source&gt;</a>
-                    <a class="list-group-item">&lt;span&gt;</a>
-                    <a class="list-group-item">&lt;strike&gt;</a>
+                    <a class="list-group-item">&lt;big&gt;大号字体</a>
+                    <a class="list-group-item">&lt;bdo&gt;文本方向</a>
+                    <a class="list-group-item">&lt;blockquote&gt;引用块</a>
+                    <a class="list-group-item">&lt;body&gt;文档主体</a>
+                    <a class="list-group-item">&lt;br&gt;换行符</a>
+                    <a class="list-group-item">&lt;button&gt;按钮</a>
+                    <a class="list-group-item">&lt;canvas&gt;画布</a>
+                    <a class="list-group-item">&lt;caption&gt;表格标题</a>
+                    <a class="list-group-item">&lt;cite&gt;引用</a>
+                    <a class="list-group-item">&lt;code&gt;代码</a>
+                    <a class="list-group-item">&lt;col&gt;表格列</a>
+                    <a class="list-group-item">&lt;dd&gt;定义列表定义部分</a>
+                    <a class="list-group-item">&lt;del&gt;删除元素</a>
+                    <a class="list-group-item">&lt;div&gt;块</a>
+                    <a class="list-group-item">&lt;dl&gt;定义列表</a>
+                    <a class="list-group-item">&lt;dt&gt;定义列表术语</a>
+                    <a class="list-group-item">&lt;em&gt;强调</a>
+                    <a class="list-group-item">&lt;embed&gt;嵌入插件</a>
+                    <a class="list-group-item">&lt;fieldset&gt;表单字段组</a>
+                    <a class="list-group-item">&lt;figcaption&gt;插图标题</a>
+                    <a class="list-group-item">&lt;figure&gt;插图</a>
+                    <a class="list-group-item">&lt;font&gt;字体</a>
+                    <a class="list-group-item">&lt;footer&gt;页面尾</a>
+                    <a class="list-group-item">&lt;form&gt;表单</a>
+                    <a class="list-group-item">&lt;frame&gt;框架组框架</a>
+                    <a class="list-group-item">&lt;frameset&gt;框架组</a>
+                    <a class="list-group-item">&lt;h1&gt;标题</a>
+                    <a class="list-group-item">&lt;h2&gt;标题</a>
+                    <a class="list-group-item">&lt;h3&gt;标题</a>
+                    <a class="list-group-item">&lt;h4&gt;标题</a>
+                    <a class="list-group-item">&lt;h5&gt;标题</a>
+                    <a class="list-group-item">&lt;h6&gt;标题</a>
+                    <a class="list-group-item">&lt;head&gt;头部元素</a>
+                    <a class="list-group-item">&lt;header&gt;页面头</a>
+                    <a class="list-group-item">&lt;hr&gt;分隔线</a>
+                    <a class="list-group-item">&lt;html&gt;页面根元素</a>
+                    <a class="list-group-item">&lt;i&gt;斜体</a>
+                    <a class="list-group-item">&lt;iframe&gt;框架</a>
+                    <a class="list-group-item">&lt;img&gt;图片</a>
+                    <a class="list-group-item">&lt;input&gt;表单输入框</a>
+                    <a class="list-group-item">&lt;ins&gt;新插入文本</a>
+                    <a class="list-group-item">&lt;kbd&gt;键盘按键</a>
+                    <a class="list-group-item">&lt;label&gt;标签</a>
+                    <a class="list-group-item">&lt;legend&gt;表单字段组标题</a>
+                    <a class="list-group-item">&lt;li&gt;列表项</a>
+                    <a class="list-group-item">&lt;link&gt;外部资源链接</a>
+                    <a class="list-group-item">&lt;main&gt;文档主要内容</a>
+                    <a class="list-group-item">&lt;map&gt;图片映射组</a>
+                    <a class="list-group-item">&lt;mark&gt;标记文本</a>
+                    <a class="list-group-item">&lt;meta&gt;页面信息</a>
+                    <a class="list-group-item">&lt;nav&gt;导航</a>
+                    <a class="list-group-item">&lt;noframes&gt;不支持框架时显示</a>
+                    <a class="list-group-item">&lt;noscript&gt;不支持脚本时显示</a>
+                    <a class="list-group-item">&lt;object&gt;对象</a>
+                    <a class="list-group-item">&lt;ol&gt;有序列表</a>
+                    <a class="list-group-item">&lt;optgroup&gt;表单选项组</a>
+                    <a class="list-group-item">&lt;option&gt;表单可选项</a>
+                    <a class="list-group-item">&lt;output&gt;输出文本</a>
+                    <a class="list-group-item">&lt;p&gt;段落</a>
+                    <a class="list-group-item">&lt;param&gt;对象参数</a>
+                    <a class="list-group-item">&lt;pre&gt;预定义文本</a>
+                    <a class="list-group-item">&lt;progress&gt;进度显示</a>
+                    <a class="list-group-item">&lt;q&gt;短引用</a>
+                    <a class="list-group-item">&lt;samp&gt;样本</a>
+                    <a class="list-group-item">&lt;script&gt;脚本</a>
+                    <a class="list-group-item">&lt;section&gt;节</a>
+                    <a class="list-group-item">&lt;select&gt;选择表单</a>
+                    <a class="list-group-item">&lt;small&gt;小字体</a>
+                    <a class="list-group-item">&lt;span&gt;行内元素</a>
                     <a class="list-group-item">&lt;strong&gt;强调</a>
                     <a class="list-group-item">&lt;style&gt;CSS样式</a>
                     <a class="list-group-item">&lt;sub&gt;下标</a>
@@ -161,11 +156,14 @@
         </div>
         <div id="html-main-container" class="main-container col-xs-12 col-sm-12 col-md-9 col-lg-10">
             <textarea id="html-main-textarea"></textarea>
+            <h5 id="html-main-title"></h5>
+            <iframe id="html-main-iframe" class="embed-responsive-item"></iframe>
         </div>
     </div>
     
     <script>
       window.fsize = 18;
+      window.isRun = false;
       $("textarea").on('keydown',function(e){
           if(e.keyCode == 9){
               e.preventDefault();

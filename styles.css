@@ -37,6 +37,14 @@
     overflow-y:auto;
 }
 
+#html-main-iframe{
+    display: none;
+    height:94%;
+    width:100%;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
 #font-size-controller{
    position:absolute;
    left:5%;
@@ -90,4 +98,8 @@
     bottom:10%;
     height:85%;
     width:100%;
+}
+
+#button-stop{
+    display: none;
 }
