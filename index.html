@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Inoki Shaw">
+    <meta name="keywords" content="Lego;Robot;Creation;Shanghai University">
+    <meta name="description" content="Shanghai University Creation Club Official Website">
+
+    <title>创幻社 HTML 教学系统</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Switch to this toggle button in small screen -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.php">上海大学创幻社</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid wrapper row">
+        <div class="navlist col-xs-12 col-sm-12 col-md-3 col-lg-2">
+            <div id="insert-label">
+                <div class="list-group">
+                    <a class="list-group-item">&lt;!--&gt;注释</a>
+                    <a class="list-group-item">&lt;!DOCTYPE&gt;文档类型</a>
+                    <a class="list-group-item">&lt;a&gt;链接</a>
+                    <a class="list-group-item">&lt;abbr&gt;缩写文本</a>
+                    <a class="list-group-item">&lt;address&gt;联系信息</a>
+                    <a class="list-group-item">&lt;area&gt;图像映射</a>
+                    <a class="list-group-item">&lt;article&gt;文章</a>
+                    <a class="list-group-item">&lt;aside&gt;边缘</a>
+                    <a class="list-group-item">&lt;audio&gt;音频</a>
+                    <a class="list-group-item">&lt;b&gt;粗体文本</a>
+                    <a class="list-group-item">&lt;base&gt;默认基础地址</a>
+                    <a class="list-group-item">&lt;big&gt;</a>
+                    <a class="list-group-item">&lt;blockquote&gt;</a>
+                    <a class="list-group-item">&lt;body&gt;</a>
+                    <a class="list-group-item">&lt;br&gt;</a>
+                    <a class="list-group-item">&lt;button&gt;</a>
+                    <a class="list-group-item">&lt;canvas&gt;</a>
+                    <a class="list-group-item">&lt;caption&gt;</a>
+                    <a class="list-group-item">&lt;center&gt;</a>
+                    <a class="list-group-item">&lt;cite&gt;</a>
+                    <a class="list-group-item">&lt;code&gt;</a>
+                    <a class="list-group-item">&lt;col&gt;</a>
+                    <a class="list-group-item">&lt;colgroup&gt;</a>
+                    <a class="list-group-item">&lt;command&gt;</a>
+                    <a class="list-group-item">&lt;datalist&gt;</a>
+                    <a class="list-group-item">&lt;dd&gt;</a>
+                    <a class="list-group-item">&lt;del&gt;</a>
+                    <a class="list-group-item">&lt;details&gt;</a>
+                    <a class="list-group-item">&lt;dfn&gt;</a>
+                    <a class="list-group-item">&lt;dialog&gt;</a>
+                    <a class="list-group-item">&lt;dir&gt;</a>
+                    <a class="list-group-item">&lt;div&gt;</a>
+                    <a class="list-group-item">&lt;dl&gt;</a>
+                    <a class="list-group-item">&lt;dt&gt;</a>
+                    <a class="list-group-item">&lt;em&gt;</a>
+                    <a class="list-group-item">&lt;embed&gt;</a>
+                    <a class="list-group-item">&lt;fieldset&gt;</a>
+                    <a class="list-group-item">&lt;figcaption&gt;</a>
+                    <a class="list-group-item">&lt;figure&gt;</a>
+                    <a class="list-group-item">&lt;font&gt;</a>
+                    <a class="list-group-item">&lt;footer&gt;</a>
+                    <a class="list-group-item">&lt;form&gt;</a>
+                    <a class="list-group-item">&lt;frame&gt;</a>
+                    <a class="list-group-item">&lt;frameset&gt;</a>
+                    <a class="list-group-item">&lt;h1&gt; - &lt;h6&gt;标题</a>
+                    <a class="list-group-item">&lt;head&gt;</a>
+                    <a class="list-group-item">&lt;header&gt;</a>
+                    <a class="list-group-item">&lt;hr&gt;</a>
+                    <a class="list-group-item">&lt;html&gt;</a>
+                    <a class="list-group-item">&lt;i&gt;</a>
+                    <a class="list-group-item">&lt;iframe&gt;</a>
+                    <a class="list-group-item">&lt;img&gt;</a>
+                    <a class="list-group-item">&lt;input&gt;</a>
+                    <a class="list-group-item">&lt;ins&gt;</a>
+                    <a class="list-group-item">&lt;kbd&gt;</a>
+                    <a class="list-group-item">&lt;keygen&gt;</a>
+                    <a class="list-group-item">&lt;label&gt;</a>
+                    <a class="list-group-item">&lt;legend&gt;</a>
+                    <a class="list-group-item">&lt;li&gt;</a>
+                    <a class="list-group-item">&lt;link&gt;</a>
+                    <a class="list-group-item">&lt;main&gt;</a>
+                    <a class="list-group-item">&lt;map&gt;</a>
+                    <a class="list-group-item">&lt;mark&gt;</a>
+                    <a class="list-group-item">&lt;menu&gt;</a>
+                    <a class="list-group-item">&lt;menuitem&gt;</a>
+                    <a class="list-group-item">&lt;meta&gt;</a>
+                    <a class="list-group-item">&lt;meter&gt;</a>
+                    <a class="list-group-item">&lt;nav&gt;</a>
+                    <a class="list-group-item">&lt;noframes&gt;</a>
+                    <a class="list-group-item">&lt;noscript&gt;</a>
+                    <a class="list-group-item">&lt;object&gt;</a>
+                    <a class="list-group-item">&lt;ol&gt;</a>
+                    <a class="list-group-item">&lt;optgroup&gt;</a>
+                    <a class="list-group-item">&lt;option&gt;</a>
+                    <a class="list-group-item">&lt;output&gt;</a>
+                    <a class="list-group-item">&lt;p&gt;</a>
+                    <a class="list-group-item">&lt;param&gt;</a>
+                    <a class="list-group-item">&lt;pre&gt;</a>
+                    <a class="list-group-item">&lt;progress&gt;</a>
+                    <a class="list-group-item">&lt;q&gt;</a>
+                    <a class="list-group-item">&lt;rp&gt;</a>
+                    <a class="list-group-item">&lt;rt&gt;</a>
+                    <a class="list-group-item">&lt;ruby&gt;</a>
+                    <a class="list-group-item">&lt;s&gt;</a>
+                    <a class="list-group-item">&lt;samp&gt;</a>
+                    <a class="list-group-item">&lt;script&gt;</a>
+                    <a class="list-group-item">&lt;section&gt;</a>
+                    <a class="list-group-item">&lt;select&gt;</a>
+                    <a class="list-group-item">&lt;small&gt;</a>
+                    <a class="list-group-item">&lt;source&gt;</a>
+                    <a class="list-group-item">&lt;span&gt;</a>
+                    <a class="list-group-item">&lt;strike&gt;</a>
+                    <a class="list-group-item">&lt;strong&gt;强调</a>
+                    <a class="list-group-item">&lt;style&gt;CSS样式</a>
+                    <a class="list-group-item">&lt;sub&gt;下标</a>
+                    <a class="list-group-item">&lt;sup&gt;上标</a>
+                    <a class="list-group-item">&lt;table&gt;表格</a>
+                    <a class="list-group-item">&lt;tbody&gt;表格主要部分</a>
+                    <a class="list-group-item">&lt;td&gt;表格项</a>
+                    <a class="list-group-item">&lt;textarea&gt;文本域</a>
+                    <a class="list-group-item">&lt;tfoot&gt;表格尾部</a>
+                    <a class="list-group-item">&lt;th&gt;表头</a>
+                    <a class="list-group-item">&lt;thead&gt;表格头部</a>
+                    <a class="list-group-item">&lt;time&gt;时间</a>
+                    <a class="list-group-item">&lt;title&gt;标题</a>
+                    <a class="list-group-item">&lt;tr&gt;表格行</a>
+                    <a class="list-group-item">&lt;tt&gt;等宽字体</a>
+                    <a class="list-group-item">&lt;u&gt;下划线文本</a>
+                    <a class="list-group-item">&lt;ul&gt;无序列表</a>
+                    <a class="list-group-item">&lt;var&gt;变量</a>
+                    <a class="list-group-item">&lt;video&gt;视频</a>
+                </div>
+            </div>
+            <div id="font-size-controller">
+              <label id="button-fz-minus" onclick="fzminus()">-</label>
+              <label id="fz-size-label">18pt</label>
+              <label id="button-fz-plus" onclick="fzplus()">+</label>
+            </div>
+        </div>
+        <div id="html-main-container" class="main-container col-xs-12 col-sm-12 col-md-9 col-lg-10">
+            <textarea id="html-main-textarea"></textarea>
+        </div>
+    </div>
+    
+    <script>
+      window.fsize = 18;
+      $("textarea").on('keydown',function(e){
+          if(e.keyCode == 9){
+              e.preventDefault();
+              var indent = '    ';
+              var start = this.selectionStart;
+              var end = this.selectionEnd;
+              var selected = window.getSelection().toString();
+              selected = indent + selected.replace(/\n/g,'\n'+indent);
+              this.value = this.value.substring(0,start) + selected + this.value.substring(end);
+              this.setSelectionRange(start+indent.length,start+selected.length);
+          }
+      });
+    </script>
+</body>
+</html>
